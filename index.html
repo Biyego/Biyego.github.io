@@ -717,6 +717,64 @@ nixos能做到这一点，都归功于他的函数式系...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
+                        <a href="/2025/10/27/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">
+                            在nixos上使用docker
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            前言本来docker部署openlist是有手就行的，但是由于nixos是非FHS结构，导致我在打包镜像时没有任何问题，但是一但跑容器就报错。
+安装docker首先在 configuration中安装 docker:
+1234567&#123;config,pkgs,...&#125;:&#123;	virtualisation.docker.enable = true;	users.use...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 27 2025 14:22:58 GMT+0800">
+                
+                    2025-10-27
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/nixos/">nixos</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2025/10/27/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">阅读全文<span class="seo-reader-text">在nixos上使用docker</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
                         <a href="/2025/10/27/niri%E7%9A%84%E9%85%8D%E7%BD%AE/">
                             niri的配置
                         </a>
@@ -767,64 +825,6 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
     </div>
 
     <a href="/2025/10/27/niri%E7%9A%84%E9%85%8D%E7%BD%AE/">阅读全文<span class="seo-reader-text">niri的配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2025/10/27/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">
-                            在nixos上使用docker
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            前言本来docker部署openlist是有手就行的，但是由于nixos是非FHS结构，导致我在打包镜像时没有任何问题，但是一但跑容器就报错。
-安装docker首先在 configuration中安装 docker:
-1234567&#123;config,pkgs,...&#125;:&#123;	virtualisation.docker.enable = true;	users.use...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 27 2025 14:22:58 GMT+0800">
-                
-                    2025-10-27
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/nixos/">nixos</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2025/10/27/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">阅读全文<span class="seo-reader-text">在nixos上使用docker</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
