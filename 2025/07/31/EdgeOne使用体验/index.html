@@ -77,7 +77,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/10/24/水果售货柜-智能感知与边缘计算大作业[补档]/"/>
+    <link rel="canonical" href="http://example.com/2025/07/31/edgeone使用体验/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -87,14 +87,14 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="水果销售柜-边缘计算大作业[补档]">
-<meta property="og:url" content="http://example.com/2025/10/24/%E6%B0%B4%E6%9E%9C%E5%94%AE%E8%B4%A7%E6%9F%9C-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BD%9C%E4%B8%9A%5B%E8%A1%A5%E6%A1%A3%5D/index.html">
+<meta property="og:title" content="EdgeOne使用体验[补档]">
+<meta property="og:url" content="http://example.com/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/index.html">
 <meta property="og:site_name" content="顶级🐔密">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-10-24T06:22:58.000Z">
-<meta property="article:modified_time" content="2025-10-29T06:48:31.744Z">
+<meta property="article:published_time" content="2025-07-31T12:14:12.000Z">
+<meta property="article:modified_time" content="2025-10-29T08:30:53.611Z">
 <meta property="article:author" content="binigo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -109,7 +109,7 @@
     
     <title>
         
-            水果销售柜-边缘计算大作业[补档] | binigo&#39;s 顶级🐔密
+            EdgeOne使用体验[补档] | binigo&#39;s 顶级🐔密
         
     </title>
 
@@ -335,7 +335,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">水果销售柜-边缘计算大作业[补档]</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">EdgeOne使用体验[补档]</h1>
 			</div>
 			
 		</div>
@@ -356,15 +356,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-10-24 14:22:58</span>
-        <span class="mobile">2025-10-24 14:22:58</span>
+        <span class="desktop">2025-07-31 20:14:12</span>
+        <span class="mobile">2025-07-31 20:14:12</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-10-29 14:48:31</span>
-            <span class="mobile">2025-10-29 14:48:31</span>
+            <span class="desktop">2025-10-29 16:30:53</span>
+            <span class="mobile">2025-10-29 16:30:53</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -378,7 +378,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>&nbsp;
+                            <a href="/categories/edgeone/">edgeone</a>&nbsp;
                         </li>
                     
                     
@@ -408,67 +408,85 @@
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<blockquote>
-<p>总结一下大作业罢</p>
+<p>补档就到此为止吧，别的好像没啥好补的</p>
 </blockquote>
-<p>总算是告一段落了，累似我了<br>先介绍一下：这玩意是自动买水果柜子，和学校楼下的小嗨机差不多。扫码登录后点击开门。然后就开门了。然后是用手从里面拿水果出来并关门，然后识别你拿出来了什么东西，生成订单上传到后端上。</p>
-<h2 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a>整体架构</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  springboot --&gt; |传递数据库信息|vue</span><br><span class="line">  vue --&gt;|发出请求|springboot</span><br><span class="line">  vue --&gt; |可视化信息|用户</span><br><span class="line">  树莓派 --&gt; |http|springboot</span><br><span class="line">  springboot --&gt; |阿里云mqtt|树莓派</span><br><span class="line">  </span><br></pre></td></tr></table></figure></div>
-
-<h2 id="树莓派实现"><a href="#树莓派实现" class="headerlink" title="树莓派实现"></a>树莓派实现</h2><h3 id="订单计算步骤"><a href="#订单计算步骤" class="headerlink" title="订单计算步骤"></a>订单计算步骤</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD </span><br><span class="line">   等待后端信息 --&gt; |结构为command:...,data:...|id1&#123;命令是否为open&#125;</span><br><span class="line">   id1&#123;命令是否为open&#125; --&gt; |是|开始录像</span><br><span class="line">   检测到关门--&gt;结束录像</span><br><span class="line">   开始录像 --&gt;结束录像</span><br><span class="line">   结束录像--&gt;选取视频的首帧和尾帧</span><br><span class="line">   选取视频的首帧和尾帧--&gt;计算售出的水果数量和种类</span><br><span class="line">   YOLO--&gt;计算售出的水果数量和种类</span><br><span class="line">   计算售出的水果数量和种类--&gt;生成订单</span><br><span class="line">   生成订单--&gt;上传到后端</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="水果异常检测"><a href="#水果异常检测" class="headerlink" title="水果异常检测"></a>水果异常检测</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">flowchart TD </span><br><span class="line">  定时触发 --&gt; 获取传感器信息</span><br><span class="line">  获取传感器信息 --&gt;|硫化氢、烟雾、温湿度|sklearn推理</span><br><span class="line">  sklearn推理--&gt;|含量是否有问题|上传到后端</span><br><span class="line">  定时触发--&gt;YOLO</span><br><span class="line">  YOLO--&gt;|水果画框后裁剪的图像|vgg16</span><br><span class="line">  vgg16--&gt;|是否有腐烂位置|上传到后端</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>基于vue3框架，使用element-plus组件库。</p>
-<h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><p>基于javaspringboot框架，mysql数据库，redis，mybatis-plus。</p>
-<h3 id="边端"><a href="#边端" class="headerlink" title="边端"></a>边端</h3><ol>
-<li>视觉模型为yolov11，转换为onnx格式，使用opencv-python部署</li>
-</ol>
-<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Yolofruit</span>():</span><br><span class="line"> <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">     modelpath =yaml.safe_load(<span class="built_in">open</span>(<span class="string">&#x27;./init.yaml&#x27;</span>, <span class="string">&#x27;r&#x27;</span>))[<span class="string">&#x27;YOLO&#x27;</span>][<span class="string">&#x27;model_path&#x27;</span>]</span><br><span class="line">     Inshape =yaml.safe_load(<span class="built_in">open</span>(<span class="string">&#x27;./init.yaml&#x27;</span>, <span class="string">&#x27;r&#x27;</span>))[<span class="string">&#x27;YOLO&#x27;</span>][<span class="string">&#x27;In_shape&#x27;</span>]</span><br><span class="line">     <span class="variable language_">self</span>.net = cv2.dnn.readNetFromONNX(modelpath)</span><br><span class="line">     <span class="variable language_">self</span>.in_h=Inshape[<span class="number">1</span>]</span><br><span class="line">     <span class="variable language_">self</span>.in_w=Inshape[<span class="number">2</span>]</span><br><span class="line">  </span><br><span class="line"> <span class="keyword">def</span> <span class="title function_">getPred</span>(<span class="params">self,frame,conf=<span class="number">0.5</span>,iou=<span class="number">0.45</span></span>):</span><br><span class="line">     blob=cv2.dnn.blobFromImage(frame,<span class="number">1</span>/<span class="number">255.0</span>,(<span class="variable language_">self</span>.in_h, <span class="variable language_">self</span>.in_w),(<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>),<span class="literal">True</span>,<span class="literal">False</span>)</span><br><span class="line">     <span class="variable language_">self</span>.net.setInput(blob)</span><br><span class="line">     pred:np.ndarray = <span class="variable language_">self</span>.net.forward()[<span class="number">0</span>].T</span><br><span class="line">     pred = detect_postprocess(pred,[<span class="variable language_">self</span>.in_w,<span class="variable language_">self</span>.in_h],frame.shape[<span class="number">0</span>:<span class="number">2</span>],conf,iou)</span><br><span class="line">     <span class="keyword">return</span> pred</span><br><span class="line"></span><br><span class="line"> <span class="keyword">def</span> <span class="title function_">draw</span>(<span class="params">self,frame,preds</span>):</span><br><span class="line">     <span class="keyword">for</span> pred <span class="keyword">in</span> preds:</span><br><span class="line">         cv2.rectangle(frame, (<span class="built_in">int</span>(pred[<span class="number">0</span>]),<span class="built_in">int</span>(pred[<span class="number">1</span>])), (<span class="built_in">int</span>(pred[<span class="number">2</span>]),<span class="built_in">int</span>(pred[<span class="number">3</span>])), colors[pred[<span class="number">4</span>:].argmax()], <span class="number">2</span>)  <span class="comment"># 添加颜色和线宽参数</span></span><br><span class="line">         cv2.putText(frame, fruits[pred[<span class="number">4</span>:].argmax()], (<span class="built_in">int</span>(pred[<span class="number">0</span>]), <span class="built_in">int</span>(pred[<span class="number">1</span>]) - <span class="number">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, colors[pred[<span class="number">4</span>:].argmax()], <span class="number">2</span>)</span><br><span class="line">     <span class="keyword">return</span> frame</span><br></pre></td></tr></table></figure></div>
-
-<ol start="2">
-<li>信息接收的方式为阿里云物联网平台，调用库 <code>linkkit</code>和 <code>paho-mqtt</code>实现，注意！<code>paho-mqtt</code>的版本不能大于1.6.1。</li>
-<li>上传信息到后端的方式采用了库 <code>requests</code>，牛魔的不想用mqtt了，还是http简单爽。</li>
-</ol>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>先介绍一下这几天我都在干什么：</p>
+<p>首先，我在7月27号才发现了有edgeone的存在，在次之前我对cdn的概念都来自于七牛云的对象存储，因此，在我的眼里，cdn似乎是一个为了节省图片流量的存在并且绑定对象存储。</p>
+<p>至此，我才发现是我搞错了，cdn可以缓存任何静态文件，包括html、css、js，甚至后端的接口都可以被当成静态文件。</p>
+<p>但是时间点是7月27号，而免费兑换码到25号就没了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image.png"
+                      alt="image.png"
+                ></p>
 <blockquote>
-<p>tm我就该用websocket的</p>
+<p>首先我没注意到时间，结束了还在x上分享，企图嫖到兑换码</p>
 </blockquote>
-<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><ol>
-<li>阿里云物联网平台</li>
-<li>阿里云ecs服务器2核2G</li>
-<li>阿里云域名服务</li>
-<li>七牛云对象存储</li>
-<li>七牛云deepseek的api服务</li>
-<li>宝塔面板部署服务</li>
+<p>但拜edgeone所赐，我了解到了cloudflare这个赛博大善人。</p>
+<h2 id="cloudflare"><a href="#cloudflare" class="headerlink" title="cloudflare"></a>cloudflare</h2><p>cloudflare的作用是代理我的网站，像一个中转站一样，用户的访问需要先经过cloudflare的节点，再被转发到我的服务器上，相应的，服务器的返回也要经过cloudflare的中转。</p>
+<p>经过了cloudflare的转发，当我们在命令行使用ping指令查询域名时，就会发现指向的ip是cloudflare的节点而不是服务器公网ip，有效阻绝了网站被攻击的可能性（之前的网站一直处于裸奔状态😕 ）</p>
+<p>cloudflare的代理很简单，换dns代理，加上域名的dns解析，点击小黄云开启代理，网上教程也很多，我也不多赘述了。</p>
+<p>但这个时候我的小脑袋瓜开始超载了：</p>
+<ol>
+<li>首先cloudflare代理的灵活模式，可以让节点和源地址以http协议通信，而节点可以和客户端以https的协议通信。</li>
+<li>七牛云开通加速cdn的https协议享受不到每个月的免费10G流量，只能是http协议。</li>
+<li>如果网站是https，那么就不能访问到http的资源。</li>
 </ol>
-<h2 id="后台管理系统"><a href="#后台管理系统" class="headerlink" title="后台管理系统"></a>后台管理系统</h2><h3 id="库存管理"><a href="#库存管理" class="headerlink" title="库存管理"></a>库存管理</h3><p><img  
+<p>得出结论：我可以让cloudflare代理七牛云源站，实现https享受http的免费流量。</p>
+<p>好了直接说实践结果：</p>
+<p>貌似可行，但七牛云源站的流量断崖式上升。</p>
+<p>大概是代理真只是转发，每次都找源站要资料了罢。</p>
+<h2 id="EdgeOne"><a href="#EdgeOne" class="headerlink" title="EdgeOne"></a>EdgeOne</h2><p>好在后面又有新活动，免费送了两个免费版资格，但是只有国际站的。</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="//cdn.yelob.vip/article/-123990014/1c936c7f-7a58-437a-b06c-4a92f95dc88c"
+                     data-src="https://wp.gxnas.com/wp-content/uploads/2025/07/2-1-600x320.jpg"
                      
                 ></p>
-<h3 id="订单查询"><a href="#订单查询" class="headerlink" title="订单查询"></a>订单查询</h3><p><img  
+<h3 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h3><p>这玩意和cloudflare感觉上很不同，我就不明白，为啥开这么一个节点，还要cname转发。</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="//cdn.yelob.vip/article/-123990014/3c2fd97d-9410-44c0-b14b-f03c4cc8cbb6"
-                     
-                ><br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="//cdn.yelob.vip/article/-123990014/5b971535-cf81-4b5d-ad67-c0d63a3b1028"
-                     
+                     data-src="/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-BAMY.png"
+                      alt="image-BAMY.png"
                 ></p>
-<h3 id="销售统计"><a href="#销售统计" class="headerlink" title="销售统计"></a>销售统计</h3><p><img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="//cdn.yelob.vip/article/-123990014/d84c2872-acf0-4720-b32a-825f57125b94"
-                     
+                     data-src="/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-IpMN.png"
+                      alt="image-IpMN.png"
                 ></p>
-<h3 id="异常状态"><a href="#异常状态" class="headerlink" title="异常状态"></a>异常状态</h3><p><img  
+<p>最让我难以忍受的时候 <code>部署中</code>这三个字，非常久。</p>
+<p>最让我傻眼的是后端接口也是可以被当成静态资源代理的。因为我的上一个博客是自己想当然写的，很多细节都不清楚，能跑通，看起来没啥问题就上线了。</p>
+<p>现在我才知道，原来后端还要设置头 <code>Cache-Control: no-store。</code></p>
+<p>为啥在cloudflare就没有这问题呢。</p>
+<p>至少证明了，edgeone的cdn是真的，那么七牛云白嫖计划还在继续：</p>
+<ol>
+<li>首先，删除七牛云的cdn加速域名，然后在edgeone用cname转发七牛云存储桶的源地址（<code>qiniu.yelob.vip</code>）。</li>
+</ol>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="//cdn.yelob.vip/article/-123990014/db3d8549-4e69-4509-93e9-bbe0fd4916fe"
-                     
+                     data-src="/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-Hsxk.png"
+                      alt="image-Hsxk.png"
                 ></p>
-<h2 id="实物图"><a href="#实物图" class="headerlink" title="实物图"></a>实物图</h2><p>没有这种东西，忘记拍了</p>
+<ol start="2">
+<li>其次，在edgeone中加速域名(<code>cdn.yelob.vip</code>)，代理的是先前的源地址(<code>qiniu.yelob.vip</code>)</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-mvEv.png"
+                      alt="image-mvEv.png"
+                ></p>
+<blockquote>
+<p>真是转了一大圈啊。</p>
+</blockquote>
+<p>实验成功，白嫖计划达成。</p>
+<hr>
+<p>未完待续，是纯粹没写完。</p>
+<p>不想写了。</p>
 
 		</div>
 
@@ -476,18 +494,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> 水果销售柜-边缘计算大作业[补档]</li>
+        <li><strong>标题:</strong> EdgeOne使用体验[补档]</li>
         <li><strong>作者:</strong> binigo</li>
         <li><strong>创建于
-                :</strong> 2025-10-24 14:22:58</li>
+                :</strong> 2025-07-31 20:14:12</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-10-29 14:48:31
+                    :</strong> 2025-10-29 16:30:53
             </li>
         
         <li>
-            <strong>链接:</strong> https://blog.yelob.vip/2025/10/24/水果售货柜-智能感知与边缘计算大作业[补档]/
+            <strong>链接:</strong> https://blog.yelob.vip/2025/07/31/EdgeOne使用体验/
         </li>
         <li>
             <strong>
@@ -513,17 +531,29 @@
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
 			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/10/25/archlinux%E8%AE%BE%E7%BD%AE%5B%E8%A1%A5%E6%A1%A3%5D/">
+				<a class="prev" rel="prev" href="/2025/08/29/niri%E7%9A%84%E9%85%8D%E7%BD%AE/">
 					<span class="left arrow-icon flex justify-center items-center">
 						<i class="fa-solid fa-chevron-left"></i>
 					</span>
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">archlinux设置[补档]</span>
+						<span class="post-nav-title-item truncate max-w-48">niri的配置</span>
 						<span class="post-nav-item">上一篇</span>
 					</span>
 				</a>
 			</div>
 			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/07/31/%E6%B0%B4%E6%9E%9C%E5%94%AE%E8%B4%A7%E6%9F%9C-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BD%9C%E4%B8%9A%5B%E8%A1%A5%E6%A1%A3%5D/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">水果销售柜-边缘计算大作业[补档]</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
 			
 		</div>
 		
@@ -578,8 +608,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">水果销售柜-边缘计算大作业[补档]</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="nav-text">整体架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%9E%E7%8E%B0"><span class="nav-text">树莓派实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E5%8D%95%E8%AE%A1%E7%AE%97%E6%AD%A5%E9%AA%A4"><span class="nav-text">订单计算步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E6%9E%9C%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B"><span class="nav-text">水果异常检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="nav-text">技术栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF"><span class="nav-text">前端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E7%AB%AF"><span class="nav-text">后端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E7%AB%AF"><span class="nav-text">边端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E6%BA%90"><span class="nav-text">资源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-text">后台管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-text">库存管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E5%8D%95%E6%9F%A5%E8%AF%A2"><span class="nav-text">订单查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%80%E5%94%AE%E7%BB%9F%E8%AE%A1"><span class="nav-text">销售统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E7%8A%B6%E6%80%81"><span class="nav-text">异常状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%89%A9%E5%9B%BE"><span class="nav-text">实物图</span></a></li></ol>
+		<div class="page-title">EdgeOne使用体验[补档]</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cloudflare"><span class="nav-text">cloudflare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EdgeOne"><span class="nav-text">EdgeOne</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-text">使用体验</span></a></li></ol></li></ol>
 
 	</div>
 </div>

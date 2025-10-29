@@ -591,26 +591,26 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2025/10/29/nixos%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">
-                            nixos配置记录
+                        <a href="/2025/10/26/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">
+                            在nixos上使用docker
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            前言我承认我是一个喜欢反复无意义折腾的人，每隔一段时间，我的archlinux就如同新机一般干净。但电脑终究还是要在一个稳定的环境下拿来工作的。所以我还是放弃arch, 当然，也没有回到windows, 而是叛变到了nixos。
-nixos吸引我的地方就是它的可复现性，我可以随便折腾我的系统也不会崩，也不会忘记到底安装了些什么包，一切都是可控的。
-nixos能做到这一点，都归功于他的函数式系...
+                            前言本来docker部署openlist是有手就行的，但是由于nixos是非FHS结构，导致我在打包镜像时没有任何问题，但是一但跑容器就报错。
+安装docker首先在 configuration中安装 docker:
+1234567&#123;config,pkgs,...&#125;:&#123;	virtualisation.docker.enable = true;	users.use...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Oct 29 2025 13:41:54 GMT+0800">
+            <span class="home-article-date" data-date="Sun Oct 26 2025 14:33:00 GMT+0800">
                 
-                    2025-10-29
+                    2025-10-26
                 
             </span>
         </span>
@@ -634,7 +634,7 @@ nixos能做到这一点，都归功于他的函数式系...
         
     </div>
 
-    <a href="/2025/10/29/nixos%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">阅读全文<span class="seo-reader-text">nixos配置记录</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2025/10/26/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">阅读全文<span class="seo-reader-text">在nixos上使用docker</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -649,7 +649,7 @@ nixos能做到这一点，都归功于他的函数式系...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2025/10/28/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/">
+                        <a href="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/">
                             kvm虚拟机中共享文件夹
                         </a>
                     </h3>
@@ -666,9 +666,9 @@ nixos能做到这一点，都归功于他的函数式系...
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Oct 28 2025 14:22:58 GMT+0800">
+            <span class="home-article-date" data-date="Sun Oct 26 2025 14:02:00 GMT+0800">
                 
-                    2025-10-28
+                    2025-10-26
                 
             </span>
         </span>
@@ -702,7 +702,7 @@ nixos能做到这一点，都归功于他的函数式系...
         
     </div>
 
-    <a href="/2025/10/28/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/">阅读全文<span class="seo-reader-text">kvm虚拟机中共享文件夹</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/">阅读全文<span class="seo-reader-text">kvm虚拟机中共享文件夹</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -717,90 +717,26 @@ nixos能做到这一点，都归功于他的函数式系...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2025/10/27/niri%E7%9A%84%E9%85%8D%E7%BD%AE/">
-                            niri的配置
+                        <a href="/2025/09/27/nixos%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">
+                            nixos配置记录
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            前言
-在经历了一系列的思想斗争、反复重装系统，在kde和niri中疯狂徘徊后，我还是选择了niri作为我的主要桌面环境，谁让我闲得没事干呢。
-下面介绍一下目前我的所有配置。
-
-xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无法打开vscode、chrome、qq等软件。
-首先下载：
-1yay -S xwayland-satellite
-
-下载完成后，去...
+                            前言我承认我是一个喜欢反复无意义折腾的人，每隔一段时间，我的archlinux就如同新机一般干净。但电脑终究还是要在一个稳定的环境下拿来工作的。所以我还是放弃arch, 当然，也没有回到windows, 而是叛变到了nixos。
+nixos吸引我的地方就是它的可复现性，我可以随便折腾我的系统也不会崩，也不会忘记到底安装了些什么包，一切都是可控的。
+nixos能做到这一点，都归功于他的函数式系...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 27 2025 14:22:58 GMT+0800">
+            <span class="home-article-date" data-date="Sat Sep 27 2025 09:53:00 GMT+0800">
                 
-                    2025-10-27
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/niri/">niri</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2025/10/27/niri%E7%9A%84%E9%85%8D%E7%BD%AE/">阅读全文<span class="seo-reader-text">niri的配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2025/10/27/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">
-                            在nixos上使用docker
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            前言本来docker部署openlist是有手就行的，但是由于nixos是非FHS结构，导致我在打包镜像时没有任何问题，但是一但跑容器就报错。
-安装docker首先在 configuration中安装 docker:
-1234567&#123;config,pkgs,...&#125;:&#123;	virtualisation.docker.enable = true;	users.use...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 27 2025 14:22:58 GMT+0800">
-                
-                    2025-10-27
+                    2025-09-27
                 
             </span>
         </span>
@@ -824,7 +760,7 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
         
     </div>
 
-    <a href="/2025/10/27/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">阅读全文<span class="seo-reader-text">在nixos上使用docker</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2025/09/27/nixos%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">阅读全文<span class="seo-reader-text">nixos配置记录</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -839,7 +775,71 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/">
+                        <a href="/2025/08/29/niri%E7%9A%84%E9%85%8D%E7%BD%AE/">
+                            niri的配置
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            前言
+在经历了一系列的思想斗争、反复重装系统，在kde和niri中疯狂徘徊后，我还是选择了niri作为我的主要桌面环境，谁让我闲得没事干呢。
+下面介绍一下目前我的所有配置。
+
+xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无法打开vscode、chrome、qq等软件。
+首先下载：
+1yay -S xwayland-satellite
+
+下载完成后，去...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Aug 29 2025 14:25:00 GMT+0800">
+                
+                    2025-08-29
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/niri/">niri</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2025/08/29/niri%E7%9A%84%E9%85%8D%E7%BD%AE/">阅读全文<span class="seo-reader-text">niri的配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/">
                             EdgeOne使用体验[补档]
                         </a>
                     </h3>
@@ -860,9 +860,9 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Oct 26 2025 14:22:58 GMT+0800">
+            <span class="home-article-date" data-date="Thu Jul 31 2025 20:14:12 GMT+0800">
                 
-                    2025-10-26
+                    2025-07-31
                 
             </span>
         </span>
@@ -886,7 +886,7 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
         
     </div>
 
-    <a href="/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/">阅读全文<span class="seo-reader-text">EdgeOne使用体验[补档]</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2025/07/31/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/">阅读全文<span class="seo-reader-text">EdgeOne使用体验[补档]</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -901,66 +901,7 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2025/10/25/archlinux%E8%AE%BE%E7%BD%AE%5B%E8%A1%A5%E6%A1%A3%5D/">
-                            archlinux设置[补档]
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            
-已经很久没有写过博客了，紧急更新一下
-
-前景提要从刚买我手上的笔记本到现在过了3年，期间已经有数不清次数的由于c盘爆炸而选择重装系统（我绝对没有把软件下载在c盘）。在前几天，我的c盘又双叒叕爆红了，也曾在github上下载c盘清理的项目来救急，显然还能再撑一段时间，但是我的操作系统洁癖还是又犯了，又在考虑重装系统的事。在某个契机下，我了解到了archlinux，这个发行版和我之前接触的de...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Oct 25 2025 14:22:58 GMT+0800">
-                
-                    2025-10-25
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/archlinux/">archlinux</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2025/10/25/archlinux%E8%AE%BE%E7%BD%AE%5B%E8%A1%A5%E6%A1%A3%5D/">阅读全文<span class="seo-reader-text">archlinux设置[补档]</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2025/10/24/%E6%B0%B4%E6%9E%9C%E5%94%AE%E8%B4%A7%E6%9F%9C-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BD%9C%E4%B8%9A%5B%E8%A1%A5%E6%A1%A3%5D/">
+                        <a href="/2025/07/31/%E6%B0%B4%E6%9E%9C%E5%94%AE%E8%B4%A7%E6%9F%9C-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BD%9C%E4%B8%9A%5B%E8%A1%A5%E6%A1%A3%5D/">
                             水果销售柜-边缘计算大作业[补档]
                         </a>
                     </h3>
@@ -979,9 +920,9 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Oct 24 2025 14:22:58 GMT+0800">
+            <span class="home-article-date" data-date="Thu Jul 31 2025 19:14:12 GMT+0800">
                 
-                    2025-10-24
+                    2025-07-31
                 
             </span>
         </span>
@@ -1005,7 +946,66 @@ xwayland-satellite 配置这是niri用于兼容x11的方式，不整这个将无
         
     </div>
 
-    <a href="/2025/10/24/%E6%B0%B4%E6%9E%9C%E5%94%AE%E8%B4%A7%E6%9F%9C-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BD%9C%E4%B8%9A%5B%E8%A1%A5%E6%A1%A3%5D/">阅读全文<span class="seo-reader-text">水果销售柜-边缘计算大作业[补档]</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2025/07/31/%E6%B0%B4%E6%9E%9C%E5%94%AE%E8%B4%A7%E6%9F%9C-%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BD%9C%E4%B8%9A%5B%E8%A1%A5%E6%A1%A3%5D/">阅读全文<span class="seo-reader-text">水果销售柜-边缘计算大作业[补档]</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/07/31/archlinux%E8%AE%BE%E7%BD%AE%5B%E8%A1%A5%E6%A1%A3%5D/">
+                            archlinux设置[补档]
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            
+已经很久没有写过博客了，紧急更新一下
+
+前景提要从刚买我手上的笔记本到现在过了3年，期间已经有数不清次数的由于c盘爆炸而选择重装系统（我绝对没有把软件下载在c盘）。在前几天，我的c盘又双叒叕爆红了，也曾在github上下载c盘清理的项目来救急，显然还能再撑一段时间，但是我的操作系统洁癖还是又犯了，又在考虑重装系统的事。在某个契机下，我了解到了archlinux，这个发行版和我之前接触的de...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jul 31 2025 18:42:00 GMT+0800">
+                
+                    2025-07-31
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/archlinux/">archlinux</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2025/07/31/archlinux%E8%AE%BE%E7%BD%AE%5B%E8%A1%A5%E6%A1%A3%5D/">阅读全文<span class="seo-reader-text">archlinux设置[补档]</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>

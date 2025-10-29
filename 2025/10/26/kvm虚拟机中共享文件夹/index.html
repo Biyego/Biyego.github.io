@@ -77,7 +77,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/10/26/edgeone使用体验/"/>
+    <link rel="canonical" href="http://example.com/2025/10/26/kvm虚拟机中共享文件夹/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -87,14 +87,14 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EdgeOne使用体验[补档]">
-<meta property="og:url" content="http://example.com/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/index.html">
+<meta property="og:title" content="kvm虚拟机中共享文件夹">
+<meta property="og:url" content="http://example.com/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/index.html">
 <meta property="og:site_name" content="顶级🐔密">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-10-26T06:22:58.000Z">
-<meta property="article:modified_time" content="2025-10-29T06:48:40.624Z">
+<meta property="article:published_time" content="2025-10-26T06:02:00.000Z">
+<meta property="article:modified_time" content="2025-10-29T08:32:20.167Z">
 <meta property="article:author" content="binigo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -109,7 +109,7 @@
     
     <title>
         
-            EdgeOne使用体验[补档] | binigo&#39;s 顶级🐔密
+            kvm虚拟机中共享文件夹 | binigo&#39;s 顶级🐔密
         
     </title>
 
@@ -335,7 +335,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">EdgeOne使用体验[补档]</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">kvm虚拟机中共享文件夹</h1>
 			</div>
 			
 		</div>
@@ -356,15 +356,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-10-26 14:22:58</span>
-        <span class="mobile">2025-10-26 14:22:58</span>
+        <span class="desktop">2025-10-26 14:02</span>
+        <span class="mobile">2025-10-26 14:02</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-10-29 14:48:40</span>
-            <span class="mobile">2025-10-29 14:48:40</span>
+            <span class="desktop">2025-10-29 16:32:20</span>
+            <span class="mobile">2025-10-29 16:32:20</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -378,7 +378,17 @@
                     
                         
                         <li>
-                            <a href="/categories/edgeone/">edgeone</a>&nbsp;
+                            <a href="/categories/kvm/">kvm</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/kvm/nixos/">nixos</a>&nbsp;
                         </li>
                     
                     
@@ -407,86 +417,89 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<blockquote>
-<p>补档就到此为止吧，别的好像没啥好补的</p>
-</blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>先介绍一下这几天我都在干什么：</p>
-<p>首先，我在7月27号才发现了有edgeone的存在，在次之前我对cdn的概念都来自于七牛云的对象存储，因此，在我的眼里，cdn似乎是一个为了节省图片流量的存在并且绑定对象存储。</p>
-<p>至此，我才发现是我搞错了，cdn可以缓存任何静态文件，包括html、css、js，甚至后端的接口都可以被当成静态文件。</p>
-<p>但是时间点是7月27号，而免费兑换码到25号就没了。</p>
+			<h2 id="linux虚拟机中共享文件夹"><a href="#linux虚拟机中共享文件夹" class="headerlink" title="linux虚拟机中共享文件夹"></a>linux虚拟机中共享文件夹</h2><h3 id="在qemu上的工作"><a href="#在qemu上的工作" class="headerlink" title="在qemu上的工作"></a>在qemu上的工作</h3><p>第一步，首先安装libvirtd。</p>
+<p>注意，需要下载nixos中需要额外下载 <code>virtiofsd</code>插件。</p>
+<div class="code-container" data-rel="Nix"><figure class="iseeu highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;config,pkgs,...&#125;:&#123;</span><br><span class="line">  <span class="attr">programs.virt-manager.enable</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">   <span class="comment"># 将用户添加到libvirt组</span></span><br><span class="line">  <span class="attr">users.users.binigo</span> <span class="operator">=</span> &#123;</span><br><span class="line">    <span class="attr">isNormalUser</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="attr">extraGroups</span> <span class="operator">=</span> [ <span class="string">&quot;libvirtd&quot;</span> <span class="string">&quot;kvm&quot;</span> ];</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="attr">virtualisation.libvirtd</span> <span class="operator">=</span> &#123;</span><br><span class="line">    <span class="attr">enable</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="attr">qemu.vhostUserPackages</span> <span class="operator">=</span> <span class="keyword">with</span> pkgs; [ virtiofsd ];<span class="comment">#非常重要</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="attr">boot.extraModprobeConfig</span> <span class="operator">=</span> <span class="string">&quot;options kvm-intel nested=1&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attr">virtualisation.libvirtd.extraConfig</span> <span class="operator">=</span> <span class="string">&quot;uri_default = <span class="char escape_">\&quot;</span>qemu:///system<span class="char escape_">\&quot;</span>&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attr">virtualisation.spiceUSBRedirection.enable</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>然后再打开一个linux虚拟机，进入硬件细节界面。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image.png"
-                      alt="image.png"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-iLIM.png"
+                      alt="图片-iLIM.png"
                 ></p>
-<blockquote>
-<p>首先我没注意到时间，结束了还在x上分享，企图嫖到兑换码</p>
-</blockquote>
-<p>但拜edgeone所赐，我了解到了cloudflare这个赛博大善人。</p>
-<h2 id="cloudflare"><a href="#cloudflare" class="headerlink" title="cloudflare"></a>cloudflare</h2><p>cloudflare的作用是代理我的网站，像一个中转站一样，用户的访问需要先经过cloudflare的节点，再被转发到我的服务器上，相应的，服务器的返回也要经过cloudflare的中转。</p>
-<p>经过了cloudflare的转发，当我们在命令行使用ping指令查询域名时，就会发现指向的ip是cloudflare的节点而不是服务器公网ip，有效阻绝了网站被攻击的可能性（之前的网站一直处于裸奔状态😕 ）</p>
-<p>cloudflare的代理很简单，换dns代理，加上域名的dns解析，点击小黄云开启代理，网上教程也很多，我也不多赘述了。</p>
-<p>但这个时候我的小脑袋瓜开始超载了：</p>
-<ol>
-<li>首先cloudflare代理的灵活模式，可以让节点和源地址以http协议通信，而节点可以和客户端以https的协议通信。</li>
-<li>七牛云开通加速cdn的https协议享受不到每个月的免费10G流量，只能是http协议。</li>
-<li>如果网站是https，那么就不能访问到http的资源。</li>
-</ol>
-<p>得出结论：我可以让cloudflare代理七牛云源站，实现https享受http的免费流量。</p>
-<p>好了直接说实践结果：</p>
-<p>貌似可行，但七牛云源站的流量断崖式上升。</p>
-<p>大概是代理真只是转发，每次都找源站要资料了罢。</p>
-<h2 id="EdgeOne"><a href="#EdgeOne" class="headerlink" title="EdgeOne"></a>EdgeOne</h2><p>好在后面又有新活动，免费送了两个免费版资格，但是只有国际站的。</p>
+<p>选择允许共享内存。记得点击右下角的应用。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://wp.gxnas.com/wp-content/uploads/2025/07/2-1-600x320.jpg"
-                     
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-ccjI.png"
+                      alt="图片-ccjI.png"
                 ></p>
-<h3 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h3><p>这玩意和cloudflare感觉上很不同，我就不明白，为啥开这么一个节点，还要cname转发。</p>
+<p>接下来点击左下角的添加硬件，并且选择文件系统。</p>
+<p>源路径选择想要共享的文件夹，目标路径随便写即可。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-BAMY.png"
-                      alt="image-BAMY.png"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-PVLU.png"
+                      alt="图片-PVLU.png"
                 ></p>
+<p>qemu上的工作到此结束。</p>
+<h3 id="linux虚拟机中的工作"><a href="#linux虚拟机中的工作" class="headerlink" title="linux虚拟机中的工作"></a>linux虚拟机中的工作</h3><p>先启动虚拟机。</p>
+<p>打开命令行，然后输入命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/fstab</span><br></pre></td></tr></table></figure></div>
+
+<p>接着在文件的最后一行输入：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kvm-share /home/binigo/kvm-share virtiofs defaults 0 0</span><br></pre></td></tr></table></figure></div>
+
+<p>记得修改目标路径(<code>kvm-share</code>)和文件夹路径(<code>/home/binigo/kvm-share</code>)为你自己的。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-IpMN.png"
-                      alt="image-IpMN.png"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-mYGq.png"
+                      alt="图片-mYGq.png"
                 ></p>
-<p>最让我难以忍受的时候 <code>部署中</code>这三个字，非常久。</p>
-<p>最让我傻眼的是后端接口也是可以被当成静态资源代理的。因为我的上一个博客是自己想当然写的，很多细节都不清楚，能跑通，看起来没啥问题就上线了。</p>
-<p>现在我才知道，原来后端还要设置头 <code>Cache-Control: no-store。</code></p>
-<p>为啥在cloudflare就没有这问题呢。</p>
-<p>至少证明了，edgeone的cdn是真的，那么七牛云白嫖计划还在继续：</p>
-<ol>
-<li>首先，删除七牛云的cdn加速域名，然后在edgeone用cname转发七牛云存储桶的源地址（<code>qiniu.yelob.vip</code>）。</li>
-</ol>
+<p>然后你就会发现虚拟机的home文件夹中多了一个名称为 <code>kvm-share</code>的文件夹，这个就是与宿主机共享的文件夹。</p>
+<h2 id="在windows虚拟机中共享文件夹"><a href="#在windows虚拟机中共享文件夹" class="headerlink" title="在windows虚拟机中共享文件夹"></a>在windows虚拟机中共享文件夹</h2><p>在qemu上的工作和上面在linux虚拟机中的操作相同，我就不赘述了。</p>
+<h3 id="在windows虚拟机上的工作"><a href="#在windows虚拟机上的工作" class="headerlink" title="在windows虚拟机上的工作"></a>在windows虚拟机上的工作</h3><p>打开windows虚拟机，</p>
+<p>下载<a class="link"   target="_blank" rel="noopener" href="https://github.com/winfsp/winfsp/releases/" >WinFSP .msi<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>安装程序。</p>
+<p>下载完成后，选择core进行安装。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-Hsxk.png"
-                      alt="image-Hsxk.png"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-VTmk.png"
+                      alt="图片-VTmk.png"
                 ></p>
-<ol start="2">
-<li>其次，在edgeone中加速域名(<code>cdn.yelob.vip</code>)，代理的是先前的源地址(<code>qiniu.yelob.vip</code>)</li>
-</ol>
+<p>下载<a class="link"   target="_blank" rel="noopener" href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.285-1/" >virtio-win-guest-tools.exe<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>。</p>
+<p>安装时要选择viofs。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/2025/10/26/EdgeOne%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/image-mvEv.png"
-                      alt="image-mvEv.png"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-CqqN.png"
+                      alt="图片-CqqN.png"
                 ></p>
-<blockquote>
-<p>真是转了一大圈啊。</p>
-</blockquote>
-<p>实验成功，白嫖计划达成。</p>
-<hr>
-<p>未完待续，是纯粹没写完。</p>
-<p>不想写了。</p>
+<p>安装完成后重启虚拟机。</p>
+<p>然后进入服务设置（直接在左下角搜索服务其可）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-xBfS.png"
+                      alt="图片-xBfS.png"
+                ></p>
+<p>找到 <code>virtIO-FS Service</code>，然后在启动类型处把手动改为自动。</p>
+<p>最后点击服务状态下的启动。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-YkQs.png"
+                      alt="图片-YkQs.png"
+                ></p>
+<p>然后就可以看到文件系统中已经把共享文件夹挂载上了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/10/26/kvm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87-OUdo.png"
+                      alt="图片-OUdo.png"
+                ></p>
 
 		</div>
 
@@ -494,18 +507,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> EdgeOne使用体验[补档]</li>
+        <li><strong>标题:</strong> kvm虚拟机中共享文件夹</li>
         <li><strong>作者:</strong> binigo</li>
         <li><strong>创建于
-                :</strong> 2025-10-26 14:22:58</li>
+                :</strong> 2025-10-26 14:02:00</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-10-29 14:48:40
+                    :</strong> 2025-10-29 16:32:20
             </li>
         
         <li>
-            <strong>链接:</strong> https://blog.yelob.vip/2025/10/26/EdgeOne使用体验/
+            <strong>链接:</strong> https://blog.yelob.vip/2025/10/26/kvm虚拟机中共享文件夹/
         </li>
         <li>
             <strong>
@@ -531,7 +544,7 @@
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
 			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/10/27/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">
+				<a class="prev" rel="prev" href="/2025/10/26/nixos%E4%B8%8A%E4%BD%BF%E7%94%A8docker/">
 					<span class="left arrow-icon flex justify-center items-center">
 						<i class="fa-solid fa-chevron-left"></i>
 					</span>
@@ -544,9 +557,9 @@
 			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/10/25/archlinux%E8%AE%BE%E7%BD%AE%5B%E8%A1%A5%E6%A1%A3%5D/">
+				<a class="next" rel="next" href="/2025/09/27/nixos%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">archlinux设置[补档]</span>
+						<span class="post-nav-title-item truncate max-w-48">nixos配置记录</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -608,8 +621,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">EdgeOne使用体验[补档]</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cloudflare"><span class="nav-text">cloudflare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EdgeOne"><span class="nav-text">EdgeOne</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-text">使用体验</span></a></li></ol></li></ol>
+		<div class="page-title">kvm虚拟机中共享文件夹</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">linux虚拟机中共享文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8qemu%E4%B8%8A%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="nav-text">在qemu上的工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="nav-text">linux虚拟机中的工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">在windows虚拟机中共享文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8A%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="nav-text">在windows虚拟机上的工作</span></a></li></ol></li></ol>
 
 	</div>
 </div>
